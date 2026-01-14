@@ -1,0 +1,6 @@
+# codemagic.yaml 示例片段
+scripts:
+  - name: Build Android APK
+    script: |
+      # 将原来的 flutter build appbundle 替换为以下命令
+      flutter build apk --release --split-per-abi
