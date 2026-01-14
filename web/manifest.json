@@ -1,6 +1,6 @@
 {
-    "name": "trade",
-    "short_name": "trade",
+    "name": "xinastrade",
+    "short_name": "xinastrade",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
