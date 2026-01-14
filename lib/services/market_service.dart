@@ -1,15 +1,15 @@
 import 'package:dio/dio.dart';
 import 'package:web_socket_channel/web_socket_channel.dart';
 import 'package:binance_market/models/market_models.dart';
-import 'package:candlesticks/candlesticks.dart';
+import 'package:k_chart/entity/k_line_entity.dart'; // 引入新库
 
 class MarketService {
   final Dio _dio = Dio();
   final String _baseUrl = 'https://api.binance.com';
   final String _wsUrl = 'wss://stream.binance.com:9443/ws';
 
-  /// 获取历史 K 线 (REST)
-  Future<List<Candle>> fetchCandles({required String symbol, required String interval}) async {
+  /// 获取历史 K 线 (适配 k_chart)
+  Future<List<KLineEntity>> fetchCandles({required String symbol, required String interval}) async {
     try {
       final response = await _dio.get(
         '$_baseUrl/api/v3/klines',
@@ -21,6 +21,7 @@ class MarketService {
       );
 
       final List<dynamic> data = response.data;
+      // k_chart 需要正序数据 (旧 -> 新)，Binance API 默认就是正序，直接 map 即可
       return data.map((e) => CandleHelper.fromList(e)).toList();
     } catch (e) {
       throw Exception('Failed to load candles: $e');
@@ -35,7 +36,7 @@ class MarketService {
     return channel.stream;
   }
 
-  /// 建立深度 WebSocket 连接 (使用 depth20@100ms)
+  /// 建立深度 WebSocket 连接
   Stream<dynamic> connectDepthStream({required String symbol}) {
     final channel = WebSocketChannel.connect(
       Uri.parse('$_wsUrl/${symbol.toLowerCase()}@depth20@100ms'),
