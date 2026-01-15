@@ -1,16 +1,66 @@
-# trade
+# SimX Exchange
 
-A new Flutter project.
+**A simulated crypto exchange built with Flutter.**  
+Trade without money. Learn without risk.
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
+## 🚀 What is SimX?
 
-A few resources to get you started if this is your first Flutter project:
+SimX is a **fully-featured simulated exchange app**.  
+It looks and feels like a real crypto exchange — but **no real trading, no real money**.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Perfect for:
+- Learning how exchanges work
+- Practicing trading strategies
+- Testing UI / logic without financial risk
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+---
+
+## ✨ Features
+
+- 📈 Real-time market data display
+- 🕯️ Candlestick (K-line) charts
+- 💼 Simulated accounts & balances
+- 🧾 Order placement (market / limit)
+- 📊 Position, PnL, and trade history
+- ⚡ Smooth UI built with Flutter
+
+> This app does **NOT** connect to real exchanges and does **NOT** handle real funds.
+
+---
+
+## 🧠 Why SimX?
+
+Most people jump into trading too fast.  
+SimX lets you **slow down, observe, and understand** how trading really works.
+
+No pressure. No losses. Just learning.
+
+---
+
+## 🛠 Tech Stack
+
+- Flutter (cross-platform)
+- Dart
+- Custom simulation logic
+
+---
+
+## ⚠️ Disclaimer
+
+SimX is for **educational and testing purposes only**.  
+It is **not a real exchange** and **does not provide financial services**.
+
+---
+
+## 📌 Status
+
+🚧 Active development  
+More features coming.
+
+---
+
+## 📷 Screenshots
+
+_(Coming soon)_
